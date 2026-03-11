@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import { Router, Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/main/Home';
+import Contacts from './pages/main/Contacts';
+import About from './pages/main/About';
+import NotFound from './pages/main/NotFound';
+import Category from './components/Category';
+import Recipe from './components/Recipe';
 
 function App() {
+  const text =
+  {
+    title: "Welcome to The MealDB",
+    description: "Welcome to TheMealDB: An open, crowd-sourced database of recipes from around the world.We offer a free recipe API for anyone wanting to use it, with additional premium features if required."
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+
+          <Route index element={<Home />} />
+          <Route path='about' element={<About text={text} />} />
+          <Route path='contacts' element={<Contacts />} />
+          <Route path='category/:name' element={<Category />} />
+          <Route path='meal/:id' element={<Recipe />} />
+
+          <Route path='*' element={<NotFound />} />
+
+        </Route>
+        {/* <Route path='/' element={<Layout></Layout>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contacts' element={<Contacts/>}/> */}
+      </Routes>
     </div>
   );
 }
