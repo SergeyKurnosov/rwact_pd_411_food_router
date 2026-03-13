@@ -22,7 +22,7 @@ function Recipe() {
                     <Preloader />
                     :
                     <div className='recipe'>
-                        <img src={recipe.strMealTumb} alt={recipe.strMeal} />
+                        <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                         <h2>{recipe.strMeal}</h2>
                         <div>Category: <h3>{recipe.strCategory}</h3></div>
                         {recipe.strArea ? <div>Area: <h4>{recipe.strArea}</h4></div> : null}

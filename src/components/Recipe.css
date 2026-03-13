@@ -1,0 +1,70 @@
+.recipe img {
+    max-width: 25%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px gray;
+}
+
+.recipe p {
+    margin: 0 50px;
+    text-align: justify;
+}
+
+table {
+    width: 50%;
+    margin: 32px auto;
+    /* border: solid 1px; */
+    border-spacing: 0;
+    border-radius: 7px;
+    /* border-collapse: collapse; */
+    border-collapse: separate;
+}
+
+tr {
+
+    /* border: solid 1px; */
+    border-radius: 7px;
+}
+
+table>thead {
+    border-radius: 7px;
+    border: solid 1px;
+    height: 50px;
+    background-color: #DD7700;
+    color: aliceblue;
+}
+
+table th,
+table td {
+    /* border: solid 1px; */
+    /* border-radius: 7px; */
+    border-color: aliceblue;
+}
+
+.recipe tbody tr:nth-child(odd) {
+    background-color: lemonchiffon;
+}
+
+.recipe tbody tr:nth-child(even) {
+    background-color: gold;
+}
+
+table rowtd:first-child,th:first-child{
+    border-radius: 10px 0 0 0px;
+}
+
+table rowtd:last-child,th:last-child{
+    border-radius: 0px 10px 0 0px;
+}
+
+table tr:last-child td:first-child{
+    /* border: solid 3px; */
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:first-child{
+    /* border: solid 3px; */
+    border-bottom-right-radius: 10px;
+}
+
