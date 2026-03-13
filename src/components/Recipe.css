@@ -1,3 +1,6 @@
+.recipe{
+    padding: 50px;
+}
 .recipe img {
     max-width: 25%;
     display: block;
@@ -66,5 +69,16 @@ table tr:last-child td:first-child{
 table tr:last-child td:first-child{
     /* border: solid 3px; */
     border-bottom-right-radius: 10px;
+}
+
+.video-wrap{
+    width: 50%;
+    height: 70vh;
+    margin: 0 auto;
+}
+.video-wrap iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
