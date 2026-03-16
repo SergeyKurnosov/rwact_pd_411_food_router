@@ -5,12 +5,14 @@ function Header() {
     return (
         <div className='header'>
             <div className='wrap'>
-                <div className='logo'><Link to="/">Food</Link></div>
+                
+                <div className='logo'><Link to="/"><button class="button">Food</button></Link></div>
                 <div className='right'>
                     <ul>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contacts">Contacts</Link></li>
+                        <li><Link to="/about"><button class="button">About</button></Link></li>
+                        <li><Link to="/contacts"><button class="button">Contacts</button></Link></li>
                     </ul>
+                    
                 </div>
             </div>
 

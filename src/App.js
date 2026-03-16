@@ -9,6 +9,8 @@ import NotFound from './pages/main/NotFound';
 import Category from './components/Category';
 import Recipe from './components/Recipe';
 
+
+
 function App() {
   const text =
   {
@@ -16,25 +18,29 @@ function App() {
     description: "Welcome to TheMealDB: An open, crowd-sourced database of recipes from around the world.We offer a free recipe API for anyone wanting to use it, with additional premium features if required."
   }
   return (
-    <div className="App">
-      <Routes>
-        <Route path='/' element={<Layout />}>
+    <div class="container">
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Layout />}>
 
-          <Route index element={<Home />} />
-          <Route path='about' element={<About text={text} />} />
-          <Route path='contacts' element={<Contacts />} />
-          <Route path='category/:name' element={<Category />} />
-          <Route path='meal/:id' element={<Recipe />} />
+            <Route index element={<Home />} />
+            <Route path='about' element={<About text={text} />} />
+            <Route path='contacts' element={<Contacts />} />
+            <Route path='category/:name' element={<Category />} />
+            <Route path='meal/:id' element={<Recipe />} />
 
-          <Route path='*' element={<NotFound />} />
+            <Route path='*' element={<NotFound />} />
 
-        </Route>
-        {/* <Route path='/' element={<Layout></Layout>}/>
+          </Route>
+          {/* <Route path='/' element={<Layout></Layout>}/>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contacts' element={<Contacts/>}/> */}
-      </Routes>
+        </Routes>
+      </div>
     </div>
+
+
   );
 }
 
